@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,700;6..12,800;6..12,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+nav{
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    border-right: 1px solid #898989;
+}
+
+.addDiv{
+    width: 3rem;
+    aspect-ratio: 1;
+    background: black;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: breathe 1s infinite;
+}
+
+#addNoteButton{
+    font-size: 1.5rem;
+    transition: 0.4s ease;
+}  
+
+@keyframes breathe {
+    0%{scale: 1;}
+    50%{scale: 1.1;}
+    100%{scale: 1;}
+}
+
+.colorOptionsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.colorOpt{
+    width: 1rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.pink{
+    background-color: pink;
+}
+
+
+/* Note Container */
+
+.mainContainer{
+    padding: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    background: #e9e2e2;
+}
+
+.noteContainer{
+    position: relative;
+    height: 20rem;
+    background-color: red;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}  
+
+#checkButton{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    cursor: pointer;
+}
